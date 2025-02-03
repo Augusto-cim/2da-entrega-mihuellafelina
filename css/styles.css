@@ -1,0 +1,142 @@
+/* Estilo básico para todo el sitio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado */
+header {
+    background-color: #2a9d8f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Sección principal */
+main.fondo {
+    flex-grow: 1; /* Hace que el main ocupe el espacio restante disponible */
+    padding: 40px 20px;
+    background-image: url('../img/fondo.jpg'); /* Asegúrate de que la imagen esté en la carpeta "img" en la raíz */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* Opcional: para efecto fijo o parallax */
+    text-align: center;
+    min-height: 100vh;  /* Cubre el 100% de la altura de la ventana */
+}
+
+/* Título de la sección */
+main.fondo h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de gatos */
+.gatos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo de cada gato */
+.gato {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff; /* Fondo blanco para los gatos */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Imágenes de los gatos */
+.gato img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Información sobre el gato */
+.info-gato {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo para los botones */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px; /* Asegura que se vea debajo de la imagen */
+    transition: background-color 0.3s;
+}
+
+/* Hover para el botón */
+.boton:hover {
+    background-color: #1d6e64;
+}
+
+/* Pie de página */
+footer {
+    background-color: #2a9d8f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* ============================= */
+/* Ajuste de tamaño para el carrusel */
+/* ============================= */
+.carousel-inner img {
+    max-height: 400px;  /* Limita la altura, pero permite que la imagen se redimensione proporcionalmente */
+    width: 100%;
+    object-fit: contain;  /* Muestra la imagen completa sin recortar */
+}
