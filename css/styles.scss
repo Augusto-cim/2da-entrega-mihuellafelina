@@ -1,3 +1,14 @@
+@use "sass:color";
+
+// Variables de color
+$primary-color: #007bff;
+$secondary-color: #2a9d8f;
+$text-color: #333;
+$background-main: beige;
+$background-header-footer: url('../img/fondo.jpg');
+$button-hover: #0056b3;
+
+// Reset y estructura base
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +16,17 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: beige;
+  background: $background-main;
   width: 100vw;
 }
 
+// Contenedor principal centrado con fondo beige
 .page-container {
   width: 80%;
   max-width: 1200px;
@@ -23,15 +35,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: beige;
+  background: $background-main;
   padding: 40px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+// Menú y Footer con imagen de fondo
 header, footer {
   width: 100vw;
   text-align: center;
-  background: url("../img/fondo.jpg");
+  background: $background-header-footer;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,6 +52,7 @@ header, footer {
   color: white;
 }
 
+// Menú con botones estilizados y animación
 nav ul {
   list-style: none;
   padding: 0;
@@ -54,7 +68,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   background: white;
-  color: #007bff;
+  color: $primary-color;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
@@ -64,13 +78,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: #0056b3;
+  background: $button-hover;
   color: white;
   transform: scale(1.1);
 }
 
+// Título principal con fuente llamativa y más estética
 h1 {
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
   font-weight: 800;
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -78,6 +93,7 @@ h1 {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+// Ajuste del carrusel de "Vidas Cambiadas"
 .carousel-inner img {
   max-height: 280px;
   width: auto;
@@ -87,6 +103,7 @@ h1 {
   margin: 0 auto;
 }
 
+// Ajuste del carrusel de adopción
 .carousel-adopcion {
   display: flex;
   align-items: center;
@@ -103,6 +120,7 @@ h1 {
   border-radius: 10px;
 }
 
+// Cambio de color de las flechas del carrusel
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(22%) sepia(50%) saturate(600%) hue-rotate(15deg) brightness(80%) contrast(90%);

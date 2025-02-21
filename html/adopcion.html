@@ -30,31 +30,52 @@
   <main class="fondo py-5">
     <div class="container">
       <h2 class="text-center mb-5">Gatos en Adopción</h2>
-      <div class="row justify-content-center">
-        <!-- Tarjeta para el primer gato -->
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card">
-            <img src="../img/gato1.jpg" class="card-img-top" alt="Carbon">
-            <div class="card-body text-center">
-              <h5 class="card-title">Carbon</h5>
-              <a href="#" class="btn btn-primary mb-2">Postúlate para Adoptar</a>
-              <a href="https://www.donacionesgatos.com" target="_blank" class="btn btn-success mb-2">Haz tu Donación</a>
-              <a href="../img/formulario.pdf" download class="btn btn-outline-secondary">Descargar Formulario de Adopción</a>
+      
+      <!-- Carrusel de Gatos en Adopción -->
+      <div id="carruselAdopcion" class="carousel slide carousel-adopcion mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3 class="text-center">Carbon</h3>
+            <img src="../img/gato1.jpg" class="d-block w-100" alt="Carbon">
+            <div class="carousel-caption d-block">
+              <a href="../img/formulario.pdf" target="_blank" class="btn btn-primary">Postúlate para Adoptar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h3 class="text-center">Pupusa</h3>
+            <img src="../img/gato2.jpg" class="d-block w-100" alt="Pupusa">
+            <div class="carousel-caption d-block">
+              <a href="../img/formulario.pdf" target="_blank" class="btn btn-primary">Postúlate para Adoptar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h3 class="text-center">Milo</h3>
+            <img src="../img/gato3.jpg" class="d-block w-100" alt="Milo">
+            <div class="carousel-caption d-block">
+              <a href="../img/formulario.pdf" target="_blank" class="btn btn-primary">Postúlate para Adoptar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h3 class="text-center">Luna</h3>
+            <img src="../img/gato4.jpg" class="d-block w-100" alt="Luna">
+            <div class="carousel-caption d-block">
+              <a href="../img/formulario.pdf" target="_blank" class="btn btn-primary">Postúlate para Adoptar</a>
             </div>
           </div>
         </div>
-        <!-- Tarjeta para el segundo gato -->
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card">
-            <img src="../img/gato2.jpg" class="card-img-top" alt="Pupusa">
-            <div class="card-body text-center">
-              <h5 class="card-title">Pupusa</h5>
-              <a href="#" class="btn btn-primary mb-2">Postúlate para Adoptar</a>
-              <a href="https://www.donacionesgatos.com" target="_blank" class="btn btn-success mb-2">Haz tu Donación</a>
-              <a href="../img/formulario.pdf" download class="btn btn-outline-secondary">Descargar Formulario de Adopción</a>
-            </div>
-          </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselAdopcion" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselAdopcion" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <!-- Botón para descargar el Manual de Adopción -->
+      <div class="text-center mt-4">
+        <a href="../img/manualgatos.pdf" download class="btn btn-outline-secondary">Descargar Manual de Adopción</a>
       </div>
     </div>
   </main>
